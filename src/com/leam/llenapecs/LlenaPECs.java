@@ -71,7 +71,7 @@ public class LlenaPECs {
                 			PDTextField e = (PDTextField) f;				// text field: numeric or memo
                 			int max = e.getMaxLen();
                 			if (max>0) {
-								if (max <= 10) value = "1234567890".substring(0,max-1);				// for short (numeric) fields, 1234567890 text according to field length 
+								if (max <= 10) value = "1234567890".substring(0,max);				// for short (numeric) fields, 1234567890 text according to field length 
 								else if (max <=1000) value = String.join("", Collections.nCopies(max, "a"));	// for long (memo) fields, repeated "a" until maximum length
                 			}
                 		}
